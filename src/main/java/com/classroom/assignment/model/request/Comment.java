@@ -3,6 +3,7 @@ package com.classroom.assignment.model.request;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Null;
 
 public class Comment {
 
@@ -13,9 +14,9 @@ public class Comment {
   private String content;
 
   // ↓アノテーションを追加してください↓
-
+  @NotEmpty(message = "メールアドレスを入力してください")
   // ↑アノテーションを追加してください↑
-  @Email(message = "メールアドレスの形式ではありません")
+  @Email(message = "メールアドレスを入力してください")
   private String mail;
 
   public Comment(String name, String content, String mail) {
